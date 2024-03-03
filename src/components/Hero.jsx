@@ -1,5 +1,5 @@
 import styles from '../style';
-import { discount, robot } from '../assets';
+import { discount, bitcoin } from '../assets';
 import GetStarted from './GetStarted';
 
 const Hero = () => {
@@ -40,7 +40,7 @@ const Hero = () => {
 
       <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
         <img
-          src={robot}
+          src={bitcoin}
           alt='billing'
           className='w-[100%] h-[100%] relative z-[5]'
         />
