@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import '../Button.css';
 
-const Button = ({ styles }) => {
+const Button = ({ styles, children }) => {
   return (
-    <button type='button' className={`py-4 px-6 bg-blue-gradient font-poppins font-medium text-[18x] text-primary outline-none ${styles} rounded-[10px]`}>
-      Get Started
+    <button type='button'  className={`button ${styles} button-theme`}>
+    {children}
+    <span></span><span></span><span></span><span></span>
+    Get Started
     </button>
   )
 }

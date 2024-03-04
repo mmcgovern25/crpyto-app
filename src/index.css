@@ -21,12 +21,13 @@
 .text-gradient {
   background: radial-gradient(
     64.18% 64.18% at 71.16% 35.69%,
-    #def9fa 0.89%,
-    #bef3f5 17.23%,
-    #9dedf0 42.04%,
-    #7de7eb 55.12%,
-    #5ce1e6 71.54%,
-    #33bbcf 100%
+    #fff8a4 0%, /* White */
+    #fff8a4 15%, /* Very Pale Yellow */
+    #fff8a4 30%, /* Pale Yellow */
+    #ffec7c 45%, /* Custom Shade */
+    #ffea6a 60%, /* Light Yellow */
+    #ffd43b 75%, /* Yellow */
+    #ffd43b 100% /* Yellow */
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -37,12 +38,12 @@
 .bg-blue-gradient {
   background: linear-gradient(
     157.81deg,
-    #def9fa -43.27%,
-    #bef3f5 -21.24%,
-    #9dedf0 12.19%,
-    #7de7eb 29.82%,
-    #5ce1e6 51.94%,
-    #33bbcf 90.29%
+    #fff8a4 -43.27%,
+    #fff8a4  -21.24%,
+    #fff8a4  12.19%,
+    #ffec7c 29.82%,
+    #ffea6a 51.94%,
+    #ffd43b  90.29%
   );
 }
 
@@ -125,7 +126,7 @@
 }
 
 .blue__gradient {
-  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
+  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #ffec7c 100%);
   filter: blur(123px);
 }
 
@@ -135,6 +136,18 @@
 }
 
 .white__gradient {
-  background: rgba(255, 255, 255, 0.6);
-  filter: blur(750px);
+  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #ffec7c 100%);
+  filter: blur(123px);
+}
+
+.spin-on-hover {
+  transition: transform 0.5s ease-in-out; /* Add smooth transition */
+}
+
+.spin-on-hover:hover {
+  transform: rotate(360deg); /* Rotate the image 360 degrees on hover */
+}
+
+.button-theme {
+  @apply rounded active:scale-90 transition-all duration-100 ease-in-out shadow-md;
 }

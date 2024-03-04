@@ -42,7 +42,7 @@ const Hero = () => {
         <img
           src={bitcoin}
           alt='billing'
-          className='w-[100%] h-[100%] relative z-[5]'
+          className='w-[100%] h-[100%] relative z-[5] coin-flip'
         />
 
         <div className='absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient'/>
