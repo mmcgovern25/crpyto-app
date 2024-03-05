@@ -149,7 +149,7 @@
 }
 
 .button-theme {
-  @apply rounded active:scale-90 transition-all duration-100 ease-in-out shadow-md;
+  @apply rounded active:scale-90 transition-all duration-100 ease-in-out shadow-lg;
 }
 
 .button-gradient {
