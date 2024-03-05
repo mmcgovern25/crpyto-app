@@ -163,3 +163,15 @@
     #ffcb2c 90.29% /* Adjusted shade of golden color */
   );
 }
+
+.button-hover:hover {
+  border-width: 8px; /* Increase border width on hover */
+  border-image: linear-gradient(to right, #ffd700, #ffaa00); /* Golden gradient */
+   /* Border image slice */
+  transition: border-width 0.1s ease, border-image 0.3s ease; /* Smooth transition effect */
+}
+
+
+.getstarted-theme {
+  @apply active:scale-90 transition-all duration-100 ease-in-out shadow-md;
+}
