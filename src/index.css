@@ -151,3 +151,15 @@
 .button-theme {
   @apply rounded active:scale-90 transition-all duration-100 ease-in-out shadow-md;
 }
+
+.button-gradient {
+  background: linear-gradient(
+    157.81deg,
+    #f6e890 -43.27%, /* Adjusted shade of golden color */
+    #f6e890 -21.24%, /* Adjusted shade of golden color */
+    #f6e890 12.19%, /* Adjusted shade of golden color */
+    #ffdd6b 29.82%, /* Adjusted shade of golden color */
+    #ffd759 51.94%, /* Adjusted shade of golden color */
+    #ffcb2c 90.29% /* Adjusted shade of golden color */
+  );
+}
