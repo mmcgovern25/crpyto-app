@@ -10,18 +10,18 @@ const Stats = () => {
 
   return (
     <ScrollTrigger onEnter={() => setCounterOn(true)} onExit={()=> setCounterOn(false)} >
-       <section className={`${styles.flexCenter} text-white flex-row flex-wrap sm:mb-20 mb-6 gap-2`}>
+      <section className={`${styles.flexCenter} text-white flex-row flex-wrap sm:mb-20 mb-6 gap-5`}>
       <div>
-        <span>{counterOn && <CountUp start={0} end={100} duration={2} delay={0} />} + </span>
-        <span>expert coaches</span>
+        <span className='text-2xl sm:text-[40px] font-bold text-white'>{counterOn && <CountUp start={526900} end={527000} duration={5} delay={0} />}+ </span>
+        <span className='font-poppins sm:text-[25px] text-gradient'>ACTIVE USERS</span>
       </div>
       <div>
-        <span>+978</span>
-        <span>members joined</span>
+      <span className='text-2xl sm:text-[40px] font-bold text-white'>{counterOn && <CountUp start={8950} end={9000} duration={5} delay={0} />}+ </span>
+        <span className='font-poppins sm:text-[25px] text-gradient'>CRYPTO CURRENCIES TRACKED</span>
       </div>
       <div>
-        <span>+50</span>
-        <span>fitness programs</span>
+      <span className='text-2xl sm:text-[40px] font-bold text-white'>{counterOn && <CountUp start={430} end={475} duration={5} delay={0} />}+ </span>
+      <span className='font-poppins sm:text-[25px] text-gradient'>FIVE STAR REVIEWS</span>
       </div>
     </section>
     </ScrollTrigger>
