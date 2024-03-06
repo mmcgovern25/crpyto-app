@@ -1,16 +1,31 @@
-import { stats } from '../constants';
+import React, { useState } from 'react';
 import styles from '../style';
+import CountUp from 'react-countup';
+import ScrollTrigger from 'react-scroll-trigger';
+
 
 const Stats = () => {
+  const [counterOn, setCounterOn] = useState(false)
+
+
   return (
-    <section className={`${styles.flexCenter} flex-row flex-wrap sm:mb-20 mb-6`}>
-      {stats.map((stat) => (
-        <div key={stat.id} className={`flex-1 flex justify-start items-center flex-row m-3`}>
-        <h4 className='font-poppins font-semibold xs:text-[40px] text-[30px] xs:leading-[53px] leading-[43px] text-white'>{stat.value}</h4>
-        <p className='font-poppins font-normal xs:text-[20px] text-[15px] xs:leading-[26px] leading-[21px] text-gradient uppercase ml-3'>{stat.title}</p>
-        </div>
-      ))}
+    <ScrollTrigger onEnter={() => setCounterOn(true)} onExit={()=> setCounterOn(false)} >
+       <section className={`${styles.flexCenter} text-white flex-row flex-wrap sm:mb-20 mb-6 gap-2`}>
+      <div>
+        <span>{counterOn && <CountUp start={0} end={100} duration={2} delay={0} />} + </span>
+        <span>expert coaches</span>
+      </div>
+      <div>
+        <span>+978</span>
+        <span>members joined</span>
+      </div>
+      <div>
+        <span>+50</span>
+        <span>fitness programs</span>
+      </div>
     </section>
+    </ScrollTrigger>
+
   )
 }
 

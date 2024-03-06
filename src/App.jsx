@@ -1,7 +1,6 @@
 import styles from './style';
 import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero } from "./components";
 
-
 export const App = () => {
   return (
     <div className='bg-primary w-full overflow-hidden'>
@@ -28,11 +27,9 @@ export const App = () => {
         <CTA />
         <Footer />
 
+
       </div>
     </div>
-
-
-
     </div>
   )
 }
