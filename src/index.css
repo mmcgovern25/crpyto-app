@@ -170,9 +170,6 @@
   box-shadow: inset 0 0 0 8px #ffd700; /* Apply a shadow effect to the border */
 }
 
-
-
-
 .getstarted-theme {
   @apply active:scale-90 transition-all duration-100 ease-in-out shadow-md;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -186,4 +183,8 @@
   font-family: "Anta", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.coin-flip:hover {
+  transform: rotateY(180deg); /* Apply the flip animation */
 }
