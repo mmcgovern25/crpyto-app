@@ -2,7 +2,7 @@ import airbnb from "./airbnb.png";
 import bill from "./bill.png";
 import binance from "./binance.png";
 import card from "./card.png";
-import bitcoin from './bitcoin2.png'
+import bitcoin11 from './bitcoin11.png'
 import coinbase from "./coinbase.png";
 import dropbox from "./dropbox.png";
 import logo from "./logo.png";
@@ -51,5 +51,5 @@ export {
   people01,
   people02,
   people03,
-  bitcoin
+  bitcoin11
 };

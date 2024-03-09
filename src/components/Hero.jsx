@@ -1,6 +1,11 @@
+import { Suspense } from 'react';
 import styles from '../style';
-import { discount, bitcoin } from '../assets';
+import { discount } from '../assets';
 import GetStarted from './GetStarted';
+import Bitcoin from '../../public/Bitcoin'
+
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
 
 const Hero = () => {
   return (
@@ -39,11 +44,13 @@ const Hero = () => {
       </div>
 
       <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
-        <img
-          src={bitcoin}
-          alt='billing'
-          className='w-[100%] h-[100%] relative z-[5] coin-flip'
-        />
+      <Canvas>
+        <ambientLight />
+        <OrbitControls />
+        <Suspense fallback={null}>
+          <Bitcoin />
+        </Suspense>
+      </Canvas>
 
         <div className='absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient'/>
         <div className='absolute z-[1] w-[80%] h-[80%] bottom-40 white__gradient'/>
