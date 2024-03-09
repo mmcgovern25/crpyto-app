@@ -7,21 +7,53 @@ Source: https://sketchfab.com/3d-models/bitcoin-free-model-551901abb50a4166abdf5
 Title: BITCOIN - FREE MODEL
 */
 
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from 'react';
+import { useGLTF } from '@react-three/drei';
+import { useThree } from '@react-three/fiber';
+import { AmbientLight, DirectionalLight } from 'three';
 
-export default function Model(props) {
-  const { nodes, materials } = useGLTF('/bitcoin.gltf')
+export default function BitcoinModel(props) {
+  const { nodes, materials } = useGLTF('/bitcoin.gltf');
+  const { camera } = useThree();
+
+  // Adjust the camera position
+  camera.position.set(0, 0, 600); // Adjust the values as needed
+
   return (
     <group {...props} dispose={null}>
+      {/* Lighting */}
+      <ambientLight intensity={30} />
+      <directionalLight intensity={200} position={[5, 5, 5]} />
+
+      {/* Model */}
       <group rotation={[-Math.PI / 2, 0, 0]} scale={1096.736}>
-        <mesh geometry={nodes['16783_Zeus_v1_NEW001_oro2_0'].geometry} material={materials.oro2} />
-        <mesh geometry={nodes['16783_Zeus_v1_NEW001_oro2_0_1'].geometry} material={materials.oro2} />
-        <mesh geometry={nodes['16783_Zeus_v1_NEW001_oro2_0_2'].geometry} material={materials.oro2} />
-        <mesh geometry={nodes['16783_Zeus_v1_NEW001_oro2_0_3'].geometry} material={materials.oro2} />
+        <mesh
+          geometry={nodes['16783_Zeus_v1_NEW001_oro2_0'].geometry}
+          material={materials.oro2}
+          onPointerOver={(event) => (event.target.style.cursor = 'grab')}
+          onPointerOut={(event) => (event.target.style.cursor = 'auto')}
+        />
+        <mesh
+          geometry={nodes['16783_Zeus_v1_NEW001_oro2_0_1'].geometry}
+          material={materials.oro2}
+          onPointerOver={(event) => (event.target.style.cursor = 'grab')}
+          onPointerOut={(event) => (event.target.style.cursor = 'auto')}
+        />
+        <mesh
+          geometry={nodes['16783_Zeus_v1_NEW001_oro2_0_2'].geometry}
+          material={materials.oro2}
+          onPointerOver={(event) => (event.target.style.cursor = 'grab')}
+          onPointerOut={(event) => (event.target.style.cursor = 'auto')}
+        />
+        <mesh
+          geometry={nodes['16783_Zeus_v1_NEW001_oro2_0_3'].geometry}
+          material={materials.oro2}
+          onPointerOver={(event) => (event.target.style.cursor = 'grab')}
+          onPointerOut={(event) => (event.target.style.cursor = 'auto')}
+        />
       </group>
     </group>
-  )
+  );
 }
 
-useGLTF.preload('/bitcoin.gltf')
+useGLTF.preload('/bitcoin.gltf');

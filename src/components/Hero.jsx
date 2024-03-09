@@ -1,11 +1,11 @@
+import React, { useRef } from 'react';
 import { Suspense } from 'react';
 import styles from '../style';
 import { discount } from '../assets';
 import GetStarted from './GetStarted';
-import Bitcoin from '../../public/Bitcoin'
-
-import { Canvas } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
+import Bitcoin from '../../public/Bitcoin';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
 
 const Hero = () => {
   return (
@@ -16,13 +16,15 @@ const Hero = () => {
             alt="discount"
             className='w-[32px] h-[32px]'
           />
+      <div className='absolute z-[3] -left-1/2 top-0 w-[50%] h-[50%] rounded-full white__gradient' />
+        <div className='absolute z-[0] -left-1/2 bottom-0 w-[50%] h-[50%] rounded-full blue__gradient'  />
+
           <p className={`${styles.paragraph} ml-2`}>
-          <span className='text-white'>20%</span> Discount For {" "}
-          <span className='text-white'>1 Month</span> Account
+          <span className='text-white'>Start</span> your {" "}
+          <span className='text-white'>FREE</span> 30 day trial today
           </p>
 
         </div>
-
 
         <div className='flex flex-row justify-between items-center w-full'>
           <h1 className='flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100px] leading-[75px]'>
@@ -44,26 +46,27 @@ const Hero = () => {
       </div>
 
       <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
-      <Canvas>
-        <ambientLight />
-        <OrbitControls />
-        <Suspense fallback={null}>
-          <Bitcoin />
-        </Suspense>
-      </Canvas>
 
-        <div className='absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient'/>
-        <div className='absolute z-[1] w-[80%] h-[80%] bottom-40 white__gradient'/>
-        <div className='absolute z-[0] w-[50%] h-[50%] right-20 bottom-20 blue__gradient'/>
+
+        <Canvas style={{ cursor: 'grab' }}>
+          <ambientLight intensity={0.5} /> {/* Adjust the intensity as needed */}
+          <pointLight position={[10, 10, 10]} />
+          {/* Add more lights as necessary */}
+          <OrbitControls />
+          <Suspense fallback={null}>
+            <Bitcoin />
+          </Suspense>
+        </Canvas>
       </div>
 
-    <div className={`ss:hidden ${styles.flexCenter}`}>
-      <GetStarted />
-    </div>
-
+      <div className={`ss:hidden ${styles.flexCenter}`}>
+        <GetStarted />
+      </div>
 
     </section>
-  )
-}
 
-export default Hero
+
+  );
+};
+
+export default Hero;
