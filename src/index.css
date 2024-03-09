@@ -188,3 +188,16 @@
 .coin-flip:hover {
   transform: rotateY(180deg); /* Apply the flip animation */
 }
+
+.bg-goldishYellow {
+  background-color: rgba(255, 215, 0, 0.1); /* RGB values for goldish yellow with 0.1 opacity */
+}
+
+.the-best-ad {
+  position: absolute;
+  background-color: var(--orange);
+  width: 5.4rem;
+  height: 80%;
+  left:px;
+  border-radius: 3rem,
+}
