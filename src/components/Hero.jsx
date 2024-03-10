@@ -53,8 +53,8 @@ const Hero = () => {
             className='w-[32px] h-[32px]'
           />
           <p className={`${styles.paragraph} ml-2`}>
-            <span className='text-white'>Start</span> your {" "}
-            <span className='text-white'>FREE</span> 30 day trial today
+            <span className='text-white'>Entirely FREE </span> but only for a {" "}
+            <span className='text-white'>Limited Time</span>
           </p>
         </div>
 
@@ -63,7 +63,7 @@ const Hero = () => {
             className='flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100px] leading-[75px]'
             variants={titleVariants} // Animation variants
           >
-            The Next <br className="sm:block hidden" />
+            The Future <br className="sm:block hidden" />
             {" "}
             <span className='text-gradient'>Generation</span>
             {" "}
@@ -78,7 +78,7 @@ const Hero = () => {
           className='font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100px] leading-[75px] w-full'
           variants={titleVariants} // Animation variants
         >
-          Payment Method.
+          Of Finance.
         </motion.h1>
         <div
           className={`${styles.paragraph} max-w-[470px] mt-5`} // Animation variants

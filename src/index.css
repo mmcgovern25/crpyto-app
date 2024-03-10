@@ -109,10 +109,30 @@
   }
 }
 
-.feature-card:hover {
-  background: var(--black-gradient);
+.feature-card {
+  background: linear-gradient(
+    157.81deg,
+    #543C0C -43.27%, /* Dark Gold */
+    #BC9C37 90.29% /* Lighter Gold */
+  );
   box-shadow: var(--card-shadow);
 }
+
+.feature-card-hover:hover {
+  background: linear-gradient(
+    157.81deg,
+    #543C0C -43.27%, /* Dark Gold */
+    #BC9C37 90.29% /* Lighter Gold */
+  );
+  box-shadow: var(--card-shadow);
+}
+
+
+
+
+
+
+
 
 .feedback-container .feedback-card:last-child {
   margin-right: 0px;
