@@ -258,3 +258,9 @@
   right: 0;
   z-index: 0;
 }
+
+@layer utilities {
+  .no-autofill-bg {
+      -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  }
+}
