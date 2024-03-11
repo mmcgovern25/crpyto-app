@@ -165,6 +165,10 @@
   @apply rounded active:scale-90 transition-all duration-100 ease-in-out shadow-lg;
 }
 
+.button-theme-2 {
+  @apply active:scale-90 transition-all duration-100 ease-in-out shadow-lg;
+}
+
 .button-gradient {
   background: linear-gradient(
     157.81deg,
@@ -175,7 +179,21 @@
     #ffd759 51.94%, /* Adjusted shade of golden color */
     #ffcb2c 90.29% /* Adjusted shade of golden color */
   );
+  transition: background 0.3s ease; /* Smooth transition for the background color */
 }
+
+.button-gradient:hover {
+  background: linear-gradient(
+    157.81deg,
+    #f6e890 -43.27%, /* Adjusted shade of golden color */
+    #f6e890 -21.24%, /* Adjusted shade of golden color */
+    #f6e890 12.19%, /* Adjusted shade of golden color */
+    #ffdd6b 29.82%, /* Adjusted shade of golden color */
+    #ffd759 51.94%, /* Adjusted shade of golden color */
+    #ffcb2c 90.29% /* Adjusted shade of golden color */
+  ) !important; /* Ensure the hover effect takes precedence */
+}
+
 
 .button-hover {
   border-radius: 50%; /* Ensure smooth rounded corners */
@@ -213,11 +231,30 @@
   background-color: rgba(255, 215, 0, 0.1); /* RGB values for goldish yellow with 0.1 opacity */
 }
 
-.the-best-ad {
+.gradientBorder {
+  position: relative;
+  overflow: hidden;
+  padding: 20px; /* Adjust padding as needed */
+}
+
+.gradientBorder::before,
+.gradientBorder::after {
+  content: '';
   position: absolute;
-  background-color: var(--orange);
-  width: 5.4rem;
-  height: 80%;
-  left:px;
-  border-radius: 3rem,
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #ffec7c 100%);
+  filter: blur(123px);
+}
+
+.gradientBorder::before {
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.gradientBorder::after {
+  bottom: 0;
+  right: 0;
+  z-index: 0;
 }
