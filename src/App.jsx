@@ -1,14 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import BrowserRouter, Routes, and Route
 import styles from './style';
-import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero, SignIn } from "./components";
- // Import the SignIn component
+import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero, SignIn, Register } from "./components";
+ // Import the SignIn and Register components
 
 const App = () => {
   return (
     <Router>
       <Routes>
         <Route path="/signin" element={<SignIn />} /> {/* Define a route for the SignIn page */}
+        <Route path="/register" element={<Register />} /> {/* Define a route for the Register page */}
         <Route path="/" element={<Home />} /> {/* Define your landing page route */}
       </Routes>
     </Router>
