@@ -10,6 +10,7 @@ import Testimonials from "./Testimonials";
 import Hero from "./Hero";
 import SignIn from "./SignIn";
 import Register from "./Register"
+import Dashboard from "./Dashboard";
 
 export {
   Navbar,
@@ -23,5 +24,6 @@ export {
   Testimonials,
   Hero,
   SignIn,
-  Register
+  Register,
+  Dashboard
 };

@@ -1,20 +1,24 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import BrowserRouter, Routes, and Route
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import styles from './style';
-import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero, SignIn, Register } from "./components";
- // Import the SignIn and Register components
+import { ToastProvider } from 'react-toast-notifications';
+import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero, SignIn, Register, Dashboard } from "./components";
 
 const App = () => {
   return (
     <Router>
+      <ToastProvider>
       <Routes>
         <Route path="/signin" element={<SignIn />} /> {/* Define a route for the SignIn page */}
-        <Route path="/register" element={<Register />} /> {/* Define a route for the Register page */}
+        <Route path="/register" element={<Register />} />
+        <Route path="/dashboard" element={<Dashboard />} /> {/* Define a route for the Dashboard page */}
         <Route path="/" element={<Home />} /> {/* Define your landing page route */}
       </Routes>
+      </ToastProvider>
     </Router>
   );
 }
+
 
 // You can define your landing page component here
 const Home = () => {
