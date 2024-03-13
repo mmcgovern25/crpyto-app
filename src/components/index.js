@@ -11,6 +11,10 @@ import Hero from "./Hero";
 import SignIn from "./SignIn";
 import Register from "./Register"
 import Dashboard from "./Dashboard";
+import Header from "./Header"
+import Coinpage from "./Coinpage";
+import Homepage from "./Homepage";
+
 
 export {
   Navbar,
@@ -25,5 +29,8 @@ export {
   Hero,
   SignIn,
   Register,
-  Dashboard
+  Dashboard,
+  Header,
+  Coinpage,
+  Homepage
 };

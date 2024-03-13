@@ -1,9 +1,9 @@
 // SignIn.jsx
-
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineUnlock } from "react-icons/ai";
 import { BiUser } from "react-icons/bi";
+import { Layout } from './Layout';
 import logo from '../assets/logo.png';
 
 const SignIn = () => {
@@ -49,12 +49,14 @@ const SignIn = () => {
     };
 
     return (
+        <Layout>
         <div className='text-white h-[100vh] flex justify-center items-center bg-primary'>
-            <div>
-                <Link to="/"> {/* Add Link component to make the logo clickable */}
+
+                  <Link to="/"> {/* Add Link component to make the logo clickable */}
                     <img src={logo} alt="hoobank" className="absolute top-0 left-0 w-[60px] h-[60px] cursor-pointer" /> {/* Add cursor-pointer class */}
                     <h1 className="absolute top-3.5 left-16 transform -translate-y-1/ text-white font-poppins text-gradient text-2xl anta-regular">RYTO TRACKERS</h1>
-                </Link>
+                  </Link>
+
                 <div className="absolute z-[3] right-0 -top-1/2 transform translate-x-1/2 w-[50%] h-[50%] rounded-full white__gradient" />
                 <div className="absolute z-[0] right-0 -top-1/2 transform translate-x-1/2 w-[50%] h-[50%] rounded-full blue__gradient" />
                 <div className="absolute z-[3] right-0 -top-1/2 transform translate-x-1/2 w-[50%] h-[50%] rounded-full white__gradient" />
@@ -101,8 +103,9 @@ const SignIn = () => {
                         </div>
                     </form>
                 </div>
-            </div>
-        </div>
+
+          </div>
+        </Layout>
     );
 };
 

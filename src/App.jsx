@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import styles from './style';
 import { ToastProvider } from 'react-toast-notifications';
-import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero, SignIn, Register, Dashboard } from "./components";
+import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero, SignIn, Register, Dashboard, Homepage, Coinpage } from "./components";
 
 const App = () => {
   return (
@@ -12,7 +12,9 @@ const App = () => {
         <Route path="/signin" element={<SignIn />} /> {/* Define a route for the SignIn page */}
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} /> {/* Define a route for the Dashboard page */}
-        <Route path="/" element={<Home />} /> {/* Define your landing page route */}
+        <Route path="/" element={<Home />} />
+        <Route path='/' component={Homepage} exact />
+        <Route path='/coins/:id' component={Coinpage} />
       </Routes>
       </ToastProvider>
     </Router>
