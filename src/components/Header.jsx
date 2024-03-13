@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { logo } from '../assets';
+import { CryptoState } from '../CryptoContext';
 
 const Header = () => {
   const [selectedCurrency, setSelectedCurrency] = useState('USD');
@@ -10,6 +11,10 @@ const Header = () => {
     setSelectedCurrency(currency);
     setShowDropdown(false);
   };
+
+  const { currency, setCurrency } = CryptoState
+
+  console.log(currency);
 
   return (
     <nav className="w-full flex py-6 justify-between items-center navbar">
@@ -40,12 +45,16 @@ const Header = () => {
             <button
               className="block px-4 py-2 text-gray-800 hover:bg-gray-200 w-full text-left"
               onClick={() => handleCurrencyChange('USD')}
+              value={currency}
+              onChange={(e) => setCurrency(e.target.value)}
             >
               USD
             </button>
             <button
               className="block px-4 py-2 text-gray-800 hover:bg-gray-200 w-full text-left"
               onClick={() => handleCurrencyChange('EUR')}
+              value={currency}
+              onChange={(e) => setCurrency(e.target.value)}
             >
               EUR
             </button>
