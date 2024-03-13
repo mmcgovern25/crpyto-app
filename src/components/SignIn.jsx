@@ -1,10 +1,9 @@
-// SignIn.jsx
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineUnlock } from "react-icons/ai";
 import { BiUser } from "react-icons/bi";
-import { Layout } from './Layout';
 import logo from '../assets/logo.png';
+import Layout from './Layout';
 
 const SignIn = () => {
     const [email, setEmail] = useState('');
@@ -49,7 +48,6 @@ const SignIn = () => {
     };
 
     return (
-        <Layout>
         <div className='text-white h-[100vh] flex justify-center items-center bg-primary'>
 
                   <Link to="/"> {/* Add Link component to make the logo clickable */}
@@ -104,8 +102,7 @@ const SignIn = () => {
                     </form>
                 </div>
 
-          </div>
-        </Layout>
+            </div>
     );
 };
 

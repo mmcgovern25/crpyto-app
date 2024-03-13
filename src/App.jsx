@@ -3,18 +3,20 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import styles from './style';
 import { ToastProvider } from 'react-toast-notifications';
 import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero, SignIn, Register, Dashboard, Homepage, Coinpage } from "./components";
+import Layout from "./components/Layout";
+
 
 const App = () => {
   return (
     <Router>
       <ToastProvider>
       <Routes>
-        <Route path="/signin" element={<SignIn />} /> {/* Define a route for the SignIn page */}
-        <Route path="/register" element={<Register />} />
-        <Route path="/dashboard" element={<Dashboard />} /> {/* Define a route for the Dashboard page */}
-        <Route path="/" element={<Home />} />
-        <Route path='/' component={Homepage} exact />
-        <Route path='/coins/:id' component={Coinpage} />
+      <Route path="/signin" element={<SignIn />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/dashboard" element={<Layout><Dashboard /></Layout>} />
+      <Route path="/" element={<Home />} />
+      <Route path='/' component={Homepage} exact />
+      <Route path="/coins/:id" element={<Layout><Coinpage /></Layout>} />
       </Routes>
       </ToastProvider>
     </Router>

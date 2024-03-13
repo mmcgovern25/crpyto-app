@@ -1,23 +1,20 @@
+// Layout.jsx
 import React from 'react';
-import styles from './style';
-import { Navbar, Footer } from './components';
+import styles from '../style';
 
-const Layout = ({ Dashboard, Header, Coinpage }) => {
+const Layout = ({ children }) => {
   return (
     <div className='bg-primary w-full overflow-hidden'>
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
-          <Navbar />
+        <div className={`${styles.boxWidth}`}>s
         </div>
       </div>
-      <div className={`${styles.paddingX} ${styles.flexStart}`}>
+
+      <div className={`bg-primary ${styles.paddingX} ${styles.paddingX} ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
-          {Dashboard}
-          {Header}
-          {Coinpage}
+          {children}
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

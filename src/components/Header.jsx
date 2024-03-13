@@ -45,9 +45,9 @@ const Header = () => {
             </button>
             <button
               className="block px-4 py-2 text-gray-800 hover:bg-gray-200 w-full text-left"
-              onClick={() => handleCurrencyChange('Euro')}
+              onClick={() => handleCurrencyChange('EUR')}
             >
-              Euro
+              EUR
             </button>
           </div>
         )}
