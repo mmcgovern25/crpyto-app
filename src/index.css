@@ -268,3 +268,8 @@ a {
       -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
   }
 }
+
+.banner {
+  /* Override width constraint */
+  width: auto;
+}

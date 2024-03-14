@@ -28,14 +28,17 @@ const Carousel = () => {
 
   const items = trending.map((coin) => {
       return (
-        <Link to={`/coins/${coin.id}`} className='"flex flex-col items-center cursor-pointer uppercase text-white' key={''}>
+        <Link to={`/coins/${coin.id}`} className='flex flex-col items-center cursor-pointer uppercase text-white h-20' key={''}>
           <img
             src={coin?.image}
             alt={coin.name}
-            height="80"
             style={{ marginBottom: 10 }}
 
           />
+
+          <span>{coin?.symbol}
+            &nbsp;
+          </span>
 
         </Link>
       )
@@ -59,6 +62,7 @@ const Carousel = () => {
         autoPlayInterval={1000}
         animationDuratiion={1500}
         disableDotsControls
+        disableButtonsControls
             responsive={responsive}
             autoPlay
             items={items}
