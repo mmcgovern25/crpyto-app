@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="flex items-center">
             <h1 className='text-white font-poppins text-gradient text-2xl anta-regular '>CRYTO TRACKERS</h1>
           </div>
-          <p className={`${styles.paragraph} mt-4 max-w-[310px]`}>A new way to make the payments easy, reliable and secure.</p>
+          <p className={`${styles.paragraph} mt-4 max-w-[310px]`}>The future of finance is here, the time is now to embrace it.</p>
         </div>
 
         <div className='flex-[1.5] w-full flex flex-row justify-between flex-wrap md:mt-0 mt-10'>
