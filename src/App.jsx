@@ -2,8 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import styles from './style';
 import { ToastProvider } from 'react-toast-notifications';
-import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero, SignIn, Register, Dashboard, Homepage, Coinpage } from "./components";
-import Layout from "./components/Layout";
+import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero, SignIn, Register, Dashboard, Coinpage } from "./components";
 
 
 const App = () => {
@@ -13,10 +12,9 @@ const App = () => {
       <Routes>
       <Route path="/signin" element={<SignIn />} />
       <Route path="/register" element={<Register />} />
-      <Route path="/dashboard" element={<Layout><Dashboard /></Layout>} />
+      <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/" element={<Home />} />
-      <Route path='/' component={Homepage} exact />
-      <Route path="/coins/:id" element={<Layout><Coinpage /></Layout>} />
+      <Route path="/coins/:id" element={<Coinpage />} />
       </Routes>
       </ToastProvider>
     </Router>

@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineUnlock } from "react-icons/ai";
 import { BiUser } from "react-icons/bi";
 import logo from '../assets/logo.png';
-import Layout from './Layout';
+
 
 const SignIn = () => {
     const [email, setEmail] = useState('');

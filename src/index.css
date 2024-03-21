@@ -51,6 +51,20 @@ a {
   );
 }
 
+.bg-blue-gradient-hover:hover {
+  background: linear-gradient(
+    157.81deg,
+    #fff8a4 -43.27%,
+    #fff8a4  -21.24%,
+    #fff8a4  12.19%,
+    #ffec7c 29.82%,
+    #ffea6a 51.94%,
+    #ffd43b  90.29%
+  );
+  color: black;
+}
+
+
 .bg-black-gradient {
   background: linear-gradient(
     144.39deg,
@@ -272,4 +286,10 @@ a {
 .banner {
   /* Override width constraint */
   width: auto;
+}
+
+/* Target only the h4 and p elements inside the card */
+div.flex-row:hover .card-title,
+div.flex-row:hover .card-content {
+  color: black;
 }

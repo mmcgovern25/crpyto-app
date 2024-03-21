@@ -13,9 +13,10 @@ import Register from "./Register"
 import Dashboard from "./Dashboard";
 import Header from "./Header"
 import Coinpage from "./Coinpage";
-import Homepage from "./Homepage";
-import Banner from "./Banner";
 import Carousel from "./Carousel";
+
+
+
 
 
 export {
@@ -34,7 +35,5 @@ export {
   Dashboard,
   Header,
   Coinpage,
-  Homepage,
-  Banner,
   Carousel
 };

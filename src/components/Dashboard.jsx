@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './Header';
-import Banner from './Banner';
+import Carousel from './Carousel';
+
 
 
 
@@ -11,7 +12,7 @@ const Dashboard = () => {
 
       <div className='bg-primary text-white h-[100vh]'>
         <Header />
-        <Banner />
+        <Carousel />
 
       </div>
 

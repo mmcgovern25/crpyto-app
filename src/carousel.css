@@ -1,0 +1,45 @@
+.tag-list {
+  margin: 0;
+  padding-inline: 0;
+  list-style: none;
+}
+
+.tag-list li {
+  padding: 1 rem;
+  background: var(--clr-primary-400);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-400)
+}
+
+.scroller {
+  width: 100px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.scroller[data-animated-true] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(90deg, transparent, white);
+  mask: linear-gradient(90deg, transparent, white);
+
+}
+
+[data-animated-true] .scroller__inner {
+  flex-wrap: nowrap;
+}
+
+.carousel-image {
+  height: 150x;
+}
+
+
+.scroller__inner {
+  padding-block: 1 rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.scroller__inner img {
+  width: 150px;
+}

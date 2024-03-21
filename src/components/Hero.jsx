@@ -1,5 +1,4 @@
-import React from 'react';
-import { Suspense } from 'react';
+import React, { useRef } from 'react';
 import styles from '../style';
 import { discount } from '../assets';
 import GetStarted from './GetStarted';
@@ -35,6 +34,10 @@ const Hero = () => {
     },
   };
 
+  const mesh = useRef();
+
+  // Animation using useFrame
+
   return (
     <motion.section
       id='home'
@@ -44,7 +47,7 @@ const Hero = () => {
       variants={containerVariants} // Animation variants
     >
       <div className='absolute z-[3] -left-1/2 top-0 w-[50%] h-[50%] rounded-full white__gradient' />
-        <div className='absolute z-[0] -left-1/2 bottom-0 w-[50%] h-[50%] rounded-full blue__gradient'  />
+      <div className='absolute z-[0] -left-1/2 bottom-0 w-[50%] h-[50%] rounded-full blue__gradient' />
       <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
 
         <div className='flex flex-row items-center py-[6px] px-4 bg-discount-gradient rounded-[10px] mb-2 '>
@@ -78,14 +81,13 @@ const Hero = () => {
           className='font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100px] leading-[75px] w-full'
           variants={titleVariants} // Animation variants
         >
-          Of Finance.
+          Of Finance<br /> Is Here.
         </motion.h1>
         <div
           className={`${styles.paragraph} max-w-[470px] mt-5`} // Animation variants
         >
-          Our team of experts uses a methodology to identify the credit cards
-          most likely to fit your needs. We examine annual percentage rates,
-          annual fees.
+          Our team  of experts uses the most up-to-date technologies to track the top cryptocurrencies in the world.
+          Stay one step ahead on your investments and the world of Crypto - all in one place.
         </div>
       </div>
 
@@ -97,9 +99,7 @@ const Hero = () => {
           <pointLight position={[10, 10, 10]} />
           {/* Add more lights as necessary */}
           <OrbitControls />
-          <Suspense fallback={null}>
-            <Bitcoin />
-          </Suspense>
+          <Bitcoin ref={mesh} rotation={[0, Math.PI / 8, 0]} /> {/* Adjust the rotation here */}
         </Canvas>
       </div>
 

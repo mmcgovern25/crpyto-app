@@ -1,84 +1,24 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import AliceCarousel from "react-alice-carousel";
-import { Link } from "react-router-dom";
-import { TrendingCoins } from "../config/api";
-
-const numberWithCommas = (x) => {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-};
+import React from 'react';
+import { logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10 } from '../assets';
+import '../carousel.css';
 
 const Carousel = () => {
-  const [trending, setTrending] = useState([]);
-
-  const fetchTrendingCoins = async () => {
-    const { data } = await axios.get(TrendingCoins());
-    setTrending(data);
-  };
-
-  useEffect(() => {
-    fetchTrendingCoins();
-  }, []);
-
-  const items = trending.map((coin) => {
-    let profit = coin?.price_change_percentage_24h >= 0;
-
-    return (
-      <div className="flex flex-row items-center justify-center cursor-pointer uppercase text-white" key={coin.id}>
-        <Link
-          to={`/coins/${coin.id}`}
-          className="flex items-center"
-        >
-          <img
-            src={coin?.image}
-            alt={coin.name}
-            height="80"
-            style={{ marginBottom: 10 }}
-          />
-          <span>
-            {coin?.symbol}
-            &nbsp;
-            <span
-              className={
-                profit ? "text-green-500 font-semibold" : "text-red-500 font-semibold"
-              }
-            >
-              {profit && "+"}
-              {coin?.price_change_percentage_24h?.toFixed(2)}%
-            </span>
-          </span>
-          <span className="text-lg font-semibold">
-            {numberWithCommas(coin?.current_price.toFixed(2))}
-          </span>
-        </Link>
-      </div>
-    );
-  });
-
-  const responsive = {
-    0: {
-      items: 2,
-    },
-    512: {
-      items: 4,
-    },
-  };
-
   return (
-    <div className="flex flex-row items-center h-1/2">
-      <AliceCarousel
-        mouseTracking
-        infinite
-        autoPlayInterval={1000}
-        animationDuration={1500}
-        disableDotsControls
-        disableButtonsControls
-        responsive={responsive}
-        items={items}
-        autoPlay
-      />
+    <div className="scroller">
+      <div className="tag-list scroller__inner">
+        <img src={logo1} alt="Logo 1" className="carousel-image"/>
+        <img src={logo2} alt="Logo 2" className="carousel-image" />
+        <img src={logo3} alt="Logo 3" className="carousel-image"/>
+        <img src={logo4} alt="Logo 4" className="carousel-image"/>
+        <img src={logo5} alt="Logo 5" className="carousel-image"/>
+        <img src={logo6} alt="Logo 6" className="carousel-image"/>
+        <img src={logo7} alt="Logo 7" className="carousel-image"/>
+        <img src={logo8} alt="Logo 8" className="carousel-image"/>
+        <img src={logo9} alt="Logo 9" className="carousel-image"/>
+        <img src={logo10} alt="Logo 10" className="carousel-image"/>
+      </div>
     </div>
   );
-};
+}
 
 export default Carousel;
