@@ -16,8 +16,8 @@ const CardDeal = () => {
     <ScrollTrigger onEnter={handleScrollTrigger}>
       <section className={layout.section}>
         <div className={layout.sectionInfo}>
-          <h2 className={styles.heading2}>Find a better card deal <br className='sm:block hidden' /> in few easy steps.</h2>
-          <p className={`${styles.paragraph} max-w-[470px] mt-5`}>random text. random text. random text. random text. random text. random text. random text. random text. random text. random text. random text. random text. random text. random text. </p>
+          <h2 className={styles.heading2}><span className='text-gradient'>Compare & Constrast</span> <br className='sm:block hidden' /> Like Never Before.</h2>
+          <p className={`${styles.paragraph}<span className='text-gradient'> max-w-[470px] mt-5 mb-5`}>Compatiable on both Mobile & Desktop versions, you'll be able to compare coins side by side at lightning speeds.</p>
           <Button styles='mt-10'/>
         </div>
 

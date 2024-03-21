@@ -25,21 +25,21 @@ export const features = [
     icon: star,
     title: "Rewards",
     content:
-      "The best credit cards offer some tantalizing combinations of promotions and prizes",
+      "Earn points towards your next crypto purchase based off your activity (coming soon).",
   },
   {
     id: "feature-2",
     icon: shield,
     title: "100% Secured",
     content:
-      "We take proactive steps make sure your information and transactions are secure.",
+      "We ensure that all of our users information is secure and that our cryptocurrency data is 100% accurate. ",
   },
   {
     id: "feature-3",
     icon: send,
-    title: "Balance Transfer",
+    title: "Live Updates",
     content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
+      "All data is updated in real time to every closest minute, to ensure you are always provided with the most up to date data.",
   },
 ];
 

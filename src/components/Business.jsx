@@ -17,7 +17,8 @@ const Business = () => {
     <ScrollTrigger onEnter={() => handleScroll(true)} onExit={() => handleScroll(false)}>
       <section id='features' className={layout.section}>
         <div className={layout.sectionInfo}>
-          <h2 className={styles.heading2}>You do the Investing, <br className="sm:block hidden" /> we’ll do the Tracking.</h2>
+          <h2 className={styles.heading2}>You do the <span className='text-gradient'>Investing,</span> <br className="sm:block hidden" /> we’ll do the <span className='text-gradient'>Tracking.</span></h2>
+
           <p className={`${styles.paragraph} max-w-[470px] mt-5 mb-5`}>
             With the right historical data, and a forecast for future trends, you´ll know when exactly when it is the time to buy, or sell.
           </p>
@@ -30,7 +31,7 @@ const Business = () => {
       key={feature.id}
       className={`flex flex-row p-6 rounded-[20px] ${index !== features.length - 1 ? 'mb-6' : 'mb-0'} bg-blue-gradient-hover`}
     >
-      <div className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-goldishYellow `}>
+      <div className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-goldishYellow dim-on-hover`}>
         <motion.img
           src={feature.icon}
           alt='icon'

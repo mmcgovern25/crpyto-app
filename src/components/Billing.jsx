@@ -33,9 +33,9 @@ const Billing = () => {
         </div>
 
         <div className={layout.sectionInfo}>
-          <h2 className={styles.heading2}>Easily control your <br className='sm:block hidden'/>billing & invoicing.</h2>
+          <h2 className={styles.heading2}>Signing Up has Never Been<br /> <span className='text-gradient'>So Easy.</span><br className='sm:block hidden'/></h2>
           <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-            This is the paragraph.This is the paragraph.This is the paragraph.This is the paragraph.This is the paragraph. This is the paragraph.
+            Your new account will be ready to go in as quick as 30 seconds, so you waste no time getting to the data.
           </p>
 
           <div className='flex flex-row flex-wrap sm:mt-10 mt-6'>
