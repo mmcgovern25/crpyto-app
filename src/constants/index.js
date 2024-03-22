@@ -47,7 +47,7 @@ export const feedback = [
   {
     id: "feedback-1",
     content:
-      "I feel prepared for the future with CryptoTrackers. I am always learning about all the different coins available.",
+      "I feel prepared for the future with Crypto Trackers. I am always learning about all the different coins available.",
     name: "Jennifer Jenson",
     title: "AI Engineer",
     img: people01,
@@ -55,7 +55,7 @@ export const feedback = [
   {
     id: "feedback-2",
     content:
-      "The Blockchain and Crypto as a whole may very well be the next industrial revoluation. Thanks to CryptoTrackers I'm no longer fearful of that future, but rather excited.",
+      "The Blockchain and Crypto as a whole may very well be the next industrial revoluation. Thanks to Crypto Trackers I'm no longer fearful of that future, but rather excited.",
     name: "Tim Crocker",
     title: "Financial Analyst",
     img: people02,

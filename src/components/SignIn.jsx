@@ -72,7 +72,7 @@ const SignIn = () => {
                                 value={email}
                                 onChange={handleEmailChange}
                             />
-                            <label htmlFor="" className="absolute text-sm text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-yellow-600 peer-focus:dark:text-yellow-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Your Email</label>
+                           <label htmlFor="" className="absolute text-sm text-white duration-300 transform -translate-y-6 scale-75 top-[10px] -z-10 origin-[0] peer-focus:left-0 peer-focus:text-yellow-600 peer-focus:dark:text-yellow-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Your Email</label>
                             <BiUser className='absolute top-4 right-4 text-slate-400' />
                         </div>
                         <div className="relative my-4">
@@ -84,7 +84,7 @@ const SignIn = () => {
                                 value={password}
                                 onChange={handlePasswordChange}
                             />
-                            <label htmlFor="" className="absolute text-sm text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-yellow-600 peer-focus:dark:text-yellow-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Your Password</label>
+                           <label htmlFor="" className="absolute text-sm text-white duration-300 transform -translate-y-6 scale-75 top-[10px] -z-10 origin-[0] peer-focus:left-0 peer-focus:text-yellow-600 peer-focus:dark:text-yellow-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Your Password</label>
                             <AiOutlineUnlock className='absolute top-4 right-4 text-slate-400' />
                         </div>
                         {errorMessage && <p className="text-red-500 mb-3">{errorMessage}</p>}
