@@ -35,6 +35,8 @@ import logo7 from "./logo7.png"
 import logo8 from "./logo8.png"
 import logo9 from "./logo9.png"
 import logo10 from "./logo10.png"
+import screenshot1 from "./screenshot1.png"
+import screenshot3 from "./screenshot3.png"
 
 export {
   airbnb,
@@ -73,5 +75,7 @@ export {
   logo7,
   logo8,
   logo9,
-  logo10
+  logo10,
+  screenshot1,
+  screenshot3
 };

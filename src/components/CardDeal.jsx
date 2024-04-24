@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ScrollTrigger from 'react-scroll-trigger';
 import { motion } from 'framer-motion';
-import { card } from '../assets'; // Make sure to import the required asset
+import { screenshot1 } from '../assets'; // Make sure to import the required asset
 import styles, { layout } from '../style';
 import Button from './Button';
 
@@ -27,7 +27,7 @@ const CardDeal = () => {
           animate={{ x: animate ? 0 : '5vw' }} // Move element back to its original position on scroll
           transition={{ type: 'easeIn', duration: 3 }} // Adjust animation duration and type as needed
         >
-          <img src={card} alt='card' className='w-[100%] h-[100%]' />
+          <img src={screenshot1} alt='screenshot' className='w-[100%] h-[100%] rounded-[30px]' />
         </motion.div>
       </section>
     </ScrollTrigger>
