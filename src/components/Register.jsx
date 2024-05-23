@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { AiOutlineUnlock, AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { BiUser } from "react-icons/bi";
-import { Link, useNavigate } from "react-router-dom"; // Import useNavigate instead of useHistory
+import { Link } from "react-router-dom"; // Import useNavigate instead of useHistory
 import logo from '../assets/logo.png';
 import { useToasts } from 'react-toast-notifications';
 
@@ -12,7 +12,6 @@ const Register = () => {
   const [passwordMatchError, setPasswordMatchError] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const navigate = useNavigate();
   const { addToast } = useToasts(); // Initialize useToasts
 
   const handleEmailChange = (e) => {
@@ -30,24 +29,24 @@ const Register = () => {
   };
 
   const handleSubmit = (e) => {
-      e.preventDefault();
+    e.preventDefault();
 
-      if (password !== confirmPassword) {
-          setPasswordMatchError('Passwords do not match. Please try again.');
-          return;
-      }
+    if (password !== confirmPassword) {
+        setPasswordMatchError('Passwords do not match. Please try again.');
+        return;
+    }
 
-      // Display toast on successful registration
-      addToast('You have successfully registered!', { appearance: 'success' });
+    // Display toast on successful registration
+    addToast('You have successfully registered!', { appearance: 'success' });
 
-      localStorage.setItem('registeredEmail', email);
-      localStorage.setItem('registeredPassword', password);
+    localStorage.setItem('registeredEmail', email);
+    localStorage.setItem('registeredPassword', password);
 
-      // Redirect to Dashboard if passwords match
-      setTimeout(() => {
-        navigate('/dashboard');
+    // Redirect to another website after a delay
+    setTimeout(() => {
+        window.location.href = 'https://cryptocoinstrackers.netlify.app/';
     }, 1000);
-  };
+};
 
   const handleShowPassword = () => {
       setShowPassword(!showPassword);

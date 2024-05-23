@@ -10,7 +10,6 @@ import Testimonials from "./Testimonials";
 import Hero from "./Hero";
 import SignIn from "./SignIn";
 import Register from "./Register"
-import Dashboard from "./Dashboard";
 import Header from "./Header"
 import Coinpage from "./Coinpage";
 import Carousel from "./Carousel";
@@ -32,7 +31,6 @@ export {
   Hero,
   SignIn,
   Register,
-  Dashboard,
   Header,
   Coinpage,
   Carousel

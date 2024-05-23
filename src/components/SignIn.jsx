@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AiOutlineUnlock } from "react-icons/ai";
 import { BiUser } from "react-icons/bi";
 import logo from '../assets/logo.png';
@@ -9,7 +9,7 @@ const SignIn = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
-    const navigate = useNavigate();
+
 
     useEffect(() => {
         // Check if registration data exists in local storage
@@ -40,7 +40,7 @@ const SignIn = () => {
 
         if (email === registeredEmail && password === registeredPassword) {
             // Redirect to Dashboard if login is successful
-            navigate('/dashboard');
+            window.location.href = 'https://cryptocoinstrackers.netlify.app/';
         } else {
             // Display error message and prevent navigation
             setErrorMessage('User not found, please try again.');
