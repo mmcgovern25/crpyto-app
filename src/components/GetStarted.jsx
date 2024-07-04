@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import styles from '../style';
 import { arrowUp } from '../assets';
+import { Link } from "react-router-dom";
 
 const GetStarted = () => {
   const containerVariants = {
@@ -17,7 +18,7 @@ const GetStarted = () => {
   };
 
   return (
-    <a href="/signin">
+    <Link to="/signin">
       <motion.div
         className={`${styles.flexCenter} w-[140px] h-[140px] rounded-full bg-blue-gradient p-[2px] cursor-pointer button-hover getstarted-theme overflow-hidden`}
         initial="hidden" // Initial state
@@ -36,7 +37,7 @@ const GetStarted = () => {
           </p>
         </div>
       </motion.div>
-    </a>
+    </Link>
   );
 };
 

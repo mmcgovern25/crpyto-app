@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../style';
+import { Link } from "react-router-dom";
 
 const CTA = () => {
   return (
@@ -13,9 +14,9 @@ const CTA = () => {
     </div>
 
       <div className={`${styles.flexCenter} sm:ml-10 ml-0 sm:mt-0 mt-10`}>
-        <a href="/signin" className={`button-theme relative h-12 w-40 overflow-hidden bg-gray-gradient font-semibold text-white shadow-2xl transition-all flex justify-center items-center before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-yellow-500 hover:before:-translate-x-40`}>
+        <Link to="/signin" className={`button-theme relative h-12 w-40 overflow-hidden bg-gray-gradient font-semibold text-white shadow-2xl transition-all flex justify-center items-center before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-yellow-500 hover:before:-translate-x-40`}>
           Get Started
-        </a>
+        </Link>
       </div>
     </section>
   );
